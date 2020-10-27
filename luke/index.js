@@ -4,11 +4,14 @@
 
 // - If determiner is greater or equal 0, `x`'s value should "Greater or equal to 0".
 
-let determiner = 3;
-if (determiner < 0) {
-  console.log(`${determiner}'s Less then 0`);
+let determiner = -2;
+let x;
+if (determiner >= 0) {
+  x = "Greater or equal to 0";
+  console.log(x);
 } else {
-  console.log(`${determiner}'s Greater or equal to 0`);
+  x = "Less than 0";
+  console.log(x);
 }
 
 // * Depending on the value of the determiner, assign a value to another variable(`updater`) and create another variable.
@@ -17,18 +20,21 @@ if (determiner < 0) {
 
 // - If determiner is less than 0, `updater`'s value should be "Less than 0".
 let updater = -25;
-if (determiner >= 0 && updater < 0) {
+let y;
+
+if (x === "Greater or equal to 0" && updater < 0) {
   updater = Math.abs(updater);
   let message = "Positive Integer";
   console.log(message);
-} else if (determiner < 0 && updater >= 0) {
-  updater = updater * -1;
-  console.log(determiner, updater);
-} else if (determiner >= 0 && updater >= 0) {
+} else if (x === "Less than 0" && updater >= 0) {
+  y = updater * -1;
+  console.log(y);
+} else if (x === "Greater or equal to 0" && updater >= 0) {
   let message = "Positive Integer";
   console.log(message);
 } else {
-  console.log(determiner, updater);
+  y = updater;
+  console.log(y);
 }
 
 // * ** Question **: What would happen if we tried to print "message" outside of the if statement ? Comment your answer in the js file.
