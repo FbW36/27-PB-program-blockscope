@@ -1,6 +1,8 @@
 //1
 let determiner = 2;
-console.log("1==>",determiner<0?"Less than 0":"Greater or equal to 0")
+let x;
+determiner < 0 ? (x = "Less than 0") : (x = "Greater or equal to 0");
+console.log("1==>", x);
 
 
 //2
